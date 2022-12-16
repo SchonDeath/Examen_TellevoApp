@@ -1,0 +1,50 @@
+<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
+<ion-content>
+  <ion-accordion-group expand="block" (click)="('top')">
+    
+    <ion-card>
+      <ion-card>
+        <img class="fotoPerfil" src="../../../assets/img/seba.jpg" alt="">
+      </ion-card>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Sebastián Gonzalez</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Jefe de Proyecto</div>
+        <br>
+        <div class="ion-padding" slot="content">seb.gonzalezs@duocuc.cl</div>
+      </ion-accordion>
+    </ion-card>
+    <ion-card>
+      <ion-card>
+        <img class="fotoPerfil" src="../../../assets/img/benja_buge.png" alt="">
+      </ion-card>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label>Benjamín Bugueño</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Desarrollador Movil</div>
+        <br>
+        <div class="ion-padding" slot="content">be.bugueno@duocuc.cl</div>
+      </ion-accordion>
+    </ion-card>
+    <ion-card>
+      <ion-card>
+        <img class="fotoPerfil" src="../../../assets/img/agustin_rod.jpg" alt="">
+      </ion-card>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label>Agustín Rodríguez</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Desarrollador Movil</div>
+        <br>
+        <div class="ion-padding" slot="content">ag.rodriguez@duocuc.cl</div>
+      </ion-accordion>
+    </ion-card>
+    
+  </ion-accordion-group>
+</ion-content>
+
+<ion-card>
+
+</ion-card>

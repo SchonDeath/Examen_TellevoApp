@@ -1,0 +1,10 @@
+<span *ngIf="weatherTemp,weatherDescription">
+  <ion-row>
+    <p class="cli-comp-p">
+      {{(weatherTemp.temp).toFixed(0)}}°
+    </p>
+    <p class="cli-comp-p">
+      {{(weatherCity)}}
+    </p>
+  </ion-row>
+</span>

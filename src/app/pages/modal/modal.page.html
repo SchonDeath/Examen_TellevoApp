@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="pasajero">
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="pasajero.name" [disabled]="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="pasajero.lastname" [disabled]="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Direccion</ion-label>
+      <ion-input type="text" [(ngModel)]="pasajero.direccion" [disabled]="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Destino</ion-label>
+      <ion-input type="text" [(ngModel)]="pasajero.destino" [disabled]="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Tipo de Pago</ion-label>
+      <ion-input type="text" [(ngModel)]="pasajero.tipodepago" [disabled]="true"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button expand="block" color="success" (click)="updatePasajero()">
+    Aceptar viaje
+  </ion-button>
+  <ion-button expand="block" color="danger" (click)="deletePasajero()">
+    Cancelar viaje
+  </ion-button>
+</ion-content>  

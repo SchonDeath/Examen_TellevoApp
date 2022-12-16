@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle | titlecase }}</ion-title>
+    <img class="img-logo" src="../../../assets/img/TeLLevoAPP_icon.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image"  >
+ 
+  <div class="avatar">
+    <ion-avatar (click)="uploadPpicture()">
+      <img *ngIf="profile?.imageUrl; else placeholder_avatar;" [src]="profile.imageUrl">
+      <ng-template #placeholder_avatar>
+       
+      </ng-template>
+    </ion-avatar>
+  </div>
+  <form [formGroup]="profilecredentials" (ngSubmit)="updateProfile()">
+    <ion-item>
+      <ion-input type="text" placeholder="Nombre" formControlName="name"></ion-input>
+      <ion-note slot="end" color="danger" *ngIf="(name?.dirty || name?.touched) && name?.errors">Ingresa tu nombre
+      </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Apellido" formControlName="lastname"></ion-input>
+      <ion-note slot="end" color="danger" *ngIf="(lastname?.dirty || lastname?.touched) && lastname?.errors">
+        Ingresa tu apellido</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      <ion-note slot="end" color="danger" *ngIf="(email?.dirty || email?.touched) && email?.errors">
+      Ingresa tu Email</ion-note>
+    </ion-item>
+     
+    <ion-item>
+      <ion-input type="text" placeholder="Dirección" formControlName="address"></ion-input>
+      <ion-note slot="end" color="danger" *ngIf="(address?.dirty || address?.touched) && address?.errors">Ingresa tu
+        dirección
+      </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Región</ion-label>
+      <ion-select class="userRegion" interface="popover" formControlName="region">
+        <ion-select-option value="RM">Santiago</ion-select-option>
+        <ion-select-option value="5">Puerto montt</ion-select-option>
+        <ion-select-option value="8">Valparaiso</ion-select-option>
+        <ion-select-option value="1">Tarapaca</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sede</ion-label>
+      <ion-select class="userRegion" interface="popover" formControlName="campus">
+        <ion-select-option value="SAV">Sede Valparaíso</ion-select-option>
+        <ion-select-option value="SPAO">Sede Padre Alonso de Ovalle</ion-select-option>
+        <ion-select-option value="SPV">Sede Plaza Vespucio</ion-select-option>
+        <ion-select-option value="SSJ">Sede San Joaquín</ion-select-option>
+        <ion-select-option value="SV">   Sede Antonio Varas
+        
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" type="submit"  >Actualizar</ion-button>
+    <!--  -->
+  </form>
+</ion-content>
+    
+    
+

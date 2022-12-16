@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle | titlecase }}</ion-title>
+    <img class="img-logo" src="../../../assets/img/TeLLevoAPP_icon.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true">
+
+  <ion-toolbar >
+    <ion-button (click)="loadMap()" shape="round" color="dark">
+      <ion-icon slot="center" name="locate"></ion-icon>
+      Mi Ubicacion
+    </ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="map-wrapper">
+    <div #map id="map"></div>
+  </div>
+
+  <ion-grid>
+ 
+    <ion-row>
+      <ion-col size="4">
+        <b>Direcci&oacute;n</b>
+      </ion-col>
+      <ion-col>
+        {{address}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="radius">
+    <ion-fab-button (click)="addPasajero()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+</ion-content>

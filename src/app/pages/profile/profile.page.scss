@@ -1,0 +1,22 @@
+.img-logo{
+  width: 2em;
+  position: absolute;
+  top: 0.2em;
+  right: 1em;
+}
+.avatar{
+  margin-top: 20px;
+  display: flex;
+  justify-content: right;
+  margin-right: 125px;
+}
+
+.no-avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #bababa;
+  justify-content: center;
+  align-items: center;
+}
+ 

@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle | titlecase }}</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background-image">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>La temperatura de hoy</ion-card-title>
+      <ion-card-subtitle><app-weather></app-weather></ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <ion-col routerLink="/buscar-viaje">
+    <ion-card>
+      <img class="tarLogo redondeo" src="../../../assets/img/HomeImage.png"  alt=""> 
+    </ion-card>
+  </ion-col>
+  <ion-col routerLink="/coversor">
+    <ion-card>
+      <img class=" redondeo" src="../../../assets/img/Fconversor.png" alt="">
+    </ion-card>
+  </ion-col>
+  <ion-grid>
+      <ion-card routerLink="/about">
+        <img class=" redondeo" src="../../../assets/img/Nosotros.png " alt="">
+      </ion-card>
+  </ion-grid>
+  <ion-button expand="full" (click)="logout()">Cerrar Sesión</ion-button>
+</ion-content>

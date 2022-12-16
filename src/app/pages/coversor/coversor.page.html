@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle | titlecase }}</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background-image ion-padding">
+  
+  <h4>Convertidor de divisa</h4>    
+  <ion-item counter="true" color="primary">
+      <ion-label  position="floating">Ingrese cantidad de CLP</ion-label>
+      <ion-input type="number" [(ngModel)] = "CLP"  maxlength="30"></ion-input>
+  </ion-item> 
+ 
+  <h5>Conversión:</h5>
+  <ion-item color="primary">
+      <ion-label>$ {{conversion}}</ion-label> 
+  </ion-item>
+
+  <h5>Valor Dolar/Euro</h5>
+  <ion-list>
+      <ion-item >
+          <ion-label>$ 1 {{Dolar?.codigo}} = $ {{Dolar?.valor}}</ion-label> 
+      </ion-item>
+      <ion-item>
+          <ion-label>€ 1 {{Euro?.codigo}} = € {{Euro?.valor}}</ion-label> 
+      </ion-item>
+
+     
+  </ion-list>
+<br>
+  <div class="CentradoBTO">
+   
+    
+    <button class="button-12" id="bto_dolar" (click)="ConvertirDolar()">Dolar</button>
+    <button class="button-12" id="bto_euro" (click)="ConvertirEuro()">Euro</button>
+    <button class="button-12" (click)="limpiarCampo()" >Vaciar</button>
+  </div>
+
+</ion-content>
+

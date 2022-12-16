@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle | titlecase }}</ion-title>
+    <img class="img-logo" src="../../../assets/img/TeLLevoAPP_icon.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let pasajero of listadoPasajero" (click)="openDetailPasajero(pasajero)">
+    <ion-label>
+        <h3>{{pasajero.name}} {{pasajero.lastname}}</h3>
+        <h5>{{pasajero.direccion}}</h5>
+        <h5>{{pasajero.destino}}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
